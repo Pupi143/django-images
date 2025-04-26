@@ -82,8 +82,11 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 
-DATABASES = { 
-'default': dj_database_url.parse(os.environ.get('DATABASE_URL'), conn_max_age=600), 
+DATABASES = {
+    'default': dj_database_url.parse(
+        'postgresql://djangoimagesstanley_user:xOMoj2XPeugl1edRJYMuESfFr0GlmPMK@dpg-d066qbili9vc73e2bdf0-a/djangoimagesstanley',
+        conn_max_age=600
+    )
 }
 
 
